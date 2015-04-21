@@ -105,7 +105,7 @@ function updateLocation(window, uri) {
 	}
 
 	// otherwise make a new request
-	var url = "https://greasyfork.org/en/scripts/by-site/" + domain + ".json?meta=1";
+	var url = "https://greasyfork.org/scripts/by-site/" + domain + ".json?meta=1";
 	utils.httpRequest(url, "json", function() {updateData(window, domain, this.response);} );
 }
 
@@ -312,7 +312,7 @@ this.greasyscripts = {
 
 	openScriptsLink: function(window) {
 		var domain = getDomain(window.gBrowser.currentURI);
-		window.gBrowser.selectedTab = window.gBrowser.addTab("https://greasyfork.org/en/scripts/by-site/" + domain);
+		window.gBrowser.selectedTab = window.gBrowser.addTab("https://greasyfork.org/scripts/by-site/" + domain);
 	},
 
 	loadIntoWindow: function(window) {
